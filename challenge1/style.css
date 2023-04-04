@@ -1,0 +1,190 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global CSS Variables */
+  :root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --heading-color: #333;
+  }
+  
+  /* Header */
+  .header {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  .navigation {
+    display: none;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  .menu li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  .menu li a.active__link {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  .nav__right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__btns {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    text-decoration: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    .secondary__btn {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .secondary__btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    }
+    
+    .primary__btn {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .primary__btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    }
+    
+    .mobile__menu {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    display: none;
+    cursor: pointer;
+    }
+    
+    /* Media queries */
+    @media screen and (max-width: 768px) {
+    .logo img {
+    max-width: 80px;
+    }
+    
+    .navigation {
+    display: block;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .navigation.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 999;
+    }
+    
+    .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    }
+    
+    .menu li a {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0;
+    text-align: center;
+    }
+    
+    .nav__right {
+    flex-direction: row-reverse;
+    }
+    
+    .mobile__menu {
+    display: block;
+    }
+    
+    .sticky__header {
+    height: 60px;
+    line-height: 60px;
+    }
+    }
+    
+    @media screen and (min-width: 769px) {
+    .navigation {
+    display: block;
+    }
+    
+    .mobile__menu {
+    display: none;
+    }
+    
+    .sticky__header {
+    height: 80px;
+    line-height: 80px;
+    }
+    }
